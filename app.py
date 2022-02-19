@@ -11,6 +11,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
+app.secret_key = "secret key"
 UPLOAD_FOLDER = 'static/uploads/'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 
