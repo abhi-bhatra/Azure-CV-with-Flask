@@ -1,6 +1,4 @@
 import os
-from unittest import result
-import urllib.request
 from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 from azure.cognitiveservices.vision.customvision.prediction import CustomVisionPredictionClient
@@ -39,7 +37,6 @@ def allowed_file(filename):
 @app.route('/')
 def upload_form():
     return render_template('upload.html')
-
 
 @app.route('/', methods=['POST'])
 def upload_image():
